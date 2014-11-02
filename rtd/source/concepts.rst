@@ -40,6 +40,7 @@ Multiple Hypervisor Support
 CloudStack works with a variety of hypervisors and hypervisor-like 
 technologies. A single cloud can contain multiple hypervisor implementations. 
 As of the current release CloudStack supports: 
+CloudStack可以在多种类型上的hypervisors上进行工作。如下：
 
 -  BareMetal (via IPMI)
 
@@ -100,7 +101,7 @@ CloudStack provides an EC2 API translation layer to permit the common EC2
 tools to be used in the use of a CloudStack cloud. 
 
 
-High Availability
+High Availability高可用
 ~~~~~~~~~~~~~~~~~
 
 CloudStack has a number of features to increase the availability of the 
@@ -113,17 +114,19 @@ storage as well as iSCSI Multipath.
 
 Deployment Architecture Overview
 --------------------------------
+布署架构预览
 
 Generally speaking, most CloudStack deployments consist of the management 
-server and the resources to be managed. During deployment you inform the 
-management server of the resources to be managed, such as IP address blocks, 
-storage devices, hypervisors, and VLANs. 
+server and the resources to be managed.（通常来说，CloudStack布署组件由管理服务器和被管理的资源组成。）
+During deployment you inform the management server of the resources to be managed, such as IP address blocks, 
+storage devices, hypervisors, and VLANs. （在部署期间，你将被管理的资源通知管理服务器，如ip地址块，存储设备，虚拟主机和VLAN等）
 
 The minimum installation consists of one machine running the CloudStack 
 Management Server and another machine to act as the cloud infrastructure (in 
 this case, a very simple infrastructure consisting of one host running 
 hypervisor software). In its smallest deployment, a single machine can act as 
 both the Management Server and the hypervisor host (using the KVM hypervisor).
+最小安装的场景包括一台运行CloudStack管理服务器和其他的机器。（在这个例子中是指运行虚拟化平台软件的主机。）在这个最小化的部署场景中是一台管理服务器和一台运行KVM的虚拟主机。
 
 .. image:: _static/images/basic-deployment.png
 
